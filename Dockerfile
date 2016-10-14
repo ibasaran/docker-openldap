@@ -12,7 +12,11 @@ RUN apt-get update && \
 
 RUN mv /etc/ldap /etc/ldap.dist
 
+RUN mkdir -p /etc/ldap/prepopulate
+
 COPY modules/ /etc/ldap.dist/modules
+
+COPY prepopulate/ /etc/ldap/prepopulate
 
 COPY entrypoint.sh /entrypoint.sh
 
