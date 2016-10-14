@@ -1,0 +1,38 @@
+dn: cn=liderAhenkConfig,dc=liderahenk,dc=org
+objectClass: pardusLiderAhenkConfig
+cn: liderAhenkConfig
+liderServiceAddress: http://193.140.98.226:8181
+
+dn: ou=People,dc=liderahenk,dc=org
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+
+dn: uid=test,dc=liderahenk,dc=org
+objectClass: pardusAccount
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: test
+sn: test
+uid: test
+userPassword:1
+
+dn: cn=ladmin,dc=liderahenk,dc=org
+objectClass: pardusLider
+objectClass: pardusAccount
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: ladmin
+sn: ladmin
+uid: ladmin
+userPassword:1
+liderPrivilege: [dc=liderahenk,dc=org:ALL:true]
+
+dn: ou=Uncategorized,dc=liderahenk,dc=org
+objectClass: top
+objectClass: organizationalUnit
+ou: Uncategorized
