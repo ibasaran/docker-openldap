@@ -14,6 +14,14 @@ RUN mv /etc/ldap /etc/ldap.dist
 
 RUN mkdir -p /etc/ldap/prepopulate
 
+ENV SLAPD_PASSWORD secret
+
+ENV SLAPD_DOMAIN liderahenk.org
+
+ENV SLAPD_ADDITIONAL_MODULES liderahenk
+
+ENV SLAPD_CONFIG_PASSWORD secret
+
 COPY modules/ /etc/ldap.dist/modules
 
 COPY prepopulate/ /etc/ldap/prepopulate
